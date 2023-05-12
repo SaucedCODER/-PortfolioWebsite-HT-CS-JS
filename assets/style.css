@@ -1,0 +1,293 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .strong {
+    color: #ea8b86; /* red */
+    font-weight: bold;
+  }
+
+  
+  nav {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  section {
+    margin: 40px 0;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+  }
+  .project {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+  }
+  .project:nth-child(odd) {
+    background-color: #f2f2f2;
+    color: #333;
+  
+  }
+  
+  .project h3 {
+    margin-top: 0;
+  }
+  
+  .project .project-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .project strong{
+    transition: color 300ms ease;
+
+    color: rgb(244, 245, 244);
+  }
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .getLink:hover{
+    color: rgb(122, 251, 122) ;
+  }
+  input[type="submit"]:hover {
+    background-color: #555;
+  }
+      
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  /* Responsive styles */
+@media only screen and (max-width: 600px) {
+
+  header {
+    font-size: 2em !important;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav li {
+    margin: 0 5px;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project .project-link {
+    text-align: center;
+  }
+
+  form {
+    display: block;
+  }
+
+  label,
+  input,
+  textarea {
+    margin-bottom: 10px;
+  }
+
+/* Contact section styles for mobile */
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    width: 90%;
+  }
+  
+  label, input, textarea {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+/* animations */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(9, 7, 3); /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+#typed-text {
+  position: relative;
+min-height: 200px;
+  z-index: 1;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor blinking */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(21, 21, 21) }
+}
+
+
+#projects {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform .5s ease-out;
+}
+
+#projects.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#scroll-message {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  display: block ;
+  transition: opacity 0.5s ease;
+  animation: scrollMessage 2s ease-in-out infinite;
+}
+#scroll-message.hide {
+ display: none;
+}
+#scroll-message p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.arrow {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #777;
+  border-width: 0 5px 5px 0;
+  transform: rotate(45deg);
+  animation: arrow 2s ease-in-out infinite;
+}
+
+@keyframes scrollMessage {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 100px) rotate(45deg);
+    -webkit-transform: translate(-50%, -10px) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, 0) rotate(45deg);
+    -webkit-transform: translate(-50%, 0) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 10px) rotate(45deg);
+    -webkit-transform: translate(-50%, 10px) rotate(45deg);
+  }
+}
+
+
+
+
+
+
