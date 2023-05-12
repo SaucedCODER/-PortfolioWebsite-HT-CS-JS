@@ -231,7 +231,6 @@ min-height: 200px;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  display: block ;
   transition: opacity 0.5s ease;
   animation: scrollMessage 2s ease-in-out infinite;
 }
