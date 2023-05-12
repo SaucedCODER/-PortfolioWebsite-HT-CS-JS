@@ -1,0 +1,76 @@
+
+#scroll-message {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: opacity 0.5s ease;
+    animation: scrollMessage 2s ease-in-out infinite;
+  }
+  #scroll-message.hide {
+   display: none;
+  }
+  #scroll-message p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .arrow {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #777;
+    border-width: 0 5px 5px 0;
+    transform: rotate(45deg);
+    animation: arrow 2s ease-in-out infinite;
+  }
+  
+  @keyframes scrollMessage {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 100px) rotate(45deg);
+      -webkit-transform: translate(-50%, -10px) rotate(45deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, 0) rotate(45deg);
+      -webkit-transform: translate(-50%, 0) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, 10px) rotate(45deg);
+      -webkit-transform: translate(-50%, 10px) rotate(45deg);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #scroll-message p {
+        font-size: 20px;
+      }
+      
+      .arrow {
+        width: 15px;
+        height: 15px;
+       
+      }
+  }

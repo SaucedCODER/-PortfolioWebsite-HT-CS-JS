@@ -9,6 +9,7 @@ My areas of expertise include <b>HTML</b>,
 <b>server-side scripting</b>, and I'm always exploring new
 technologies to enhance my skills.
 </p>
+<br>
 <p>
 My goal as a web developer is to create <b>scalable</b> and
 <b>efficient</b> websites with intuitive interfaces. I take
@@ -35,7 +36,6 @@ function type() {
 
 type();
 
-
 const projects = document.getElementById("projects");
 const scrollDownMsg = document.getElementById("scroll-message");
 
@@ -45,36 +45,56 @@ function animateProjects() {
 
   if (scrollPosition > projectsTop) {
     projects.classList.add("animate");
-    
   }
 
   const scrollPos = window.scrollY;
   // check if the user is at the top of the page
 
   if (scrollPos != 0) {
-      scrollDownMsg.classList.add("hide");
-  
-  } 
+    scrollDownMsg.classList.add("hide");
+  }
 }
 
 window.addEventListener("scroll", animateProjects);
 
-
-
 function scrollToProjects() {
-    // Get the Projects section element by its ID
-    const projectsSection = document.querySelector("#projects");
-  
-    // Calculate the scroll position of the Projects section
-    const scrollPosition = projectsSection.offsetTop - 20;
-  
-    // Scroll to the Projects section using the smooth scrolling behavior
-    window.scrollTo({
-      top: scrollPosition,
-      behavior: "smooth"
+  // Get the Projects section element by its ID
+  const projectsSection = document.querySelector("#projects");
+
+  // Calculate the scroll position of the Projects section
+  const scrollPosition = projectsSection.offsetTop - 20;
+
+  // Scroll to the Projects section using the smooth scrolling behavior
+  window.scrollTo({
+    top: scrollPosition,
+    behavior: "smooth",
+  });
+}
+
+
+
+
+const categoryButtons = document.querySelectorAll('#category-buttons button');
+const projectList = document.getElementById('project-list');
+
+// Add click event listeners to the category buttons
+categoryButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    categoryButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active class to the clicked button
+    button.classList.add('active');
+
+    // Get the selected category
+    const category = button.dataset.category;
+
+    // Show/hide projects based on the selected category
+    projectList.querySelectorAll('.project').forEach(project => {
+      if (category === 'all' || project.dataset.category === category) {
+        project.style.display = 'block';
+      } else {
+        project.style.display = 'none';
+      }
     });
-  }
-
-
-  
-  
+  });
+});
