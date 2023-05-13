@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #aaa;
+}
+
+/* Main styles */
+main {
+  padding: 40px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 40px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #222;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(34, 34, 34, 0.8);
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  transform: translateY(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.portfolio-item:hover h3 {
+  transform: translateY(0);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+      
+      <main>
+        <section id="about">
+          <img src="images/1683959833577.png"class="profile-pic" alt="My Profile Picture">
+          <h2>About Me</h2>
+          <p>I am a web developer with 5 years of experience. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit sed malesuada commodo, purus nisi maximus arcu, ac ultricies nisl felis non odio. Donec convallis velit in risus auctor, at hendrerit risus maximus. Fusce aliquam bibendum blandit. Etiam sodales vitae magna sit amet elementum.</p>
+        </section>
+      
+        <section id="portfolio">
+          <h2>My Portfolio</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <img src="images/1000005349.jpg" alt="Portfolio Item 1">
+              <h3>Portfolio Item 1</h3>
+            </div>
+            <div class="portfolio-item">
+              <img src="images/1000003203.jpg" alt="Portfolio Item 2">
+              <h3>Portfolio Item 2</h3>
+            </div>
+           
+          </div>
+        </section>
+      
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+      
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+      </main>
+      
+      <footer>
+        <p>Copyright &copy; 2023</p>
+      </footer>
+      
+      
+</body>
+</html>

@@ -20,7 +20,16 @@ body {
     text-align: center;
   }
 
- 
+  .profile-pic {
+    display: block;
+    margin: 0 auto 40px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #222;
+  }
+  
   .strong {
     color: #ea8b86; /* red */
     font-weight: bold;
@@ -62,11 +71,12 @@ body {
   
   section {
     margin: 40px 0;
-    
+    margin-bottom: 8em;
   }
   
   section h2 {
     margin-bottom: 20px;
+    text-align: center !important;
   }
 
   form {

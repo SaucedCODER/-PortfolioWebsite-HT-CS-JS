@@ -71,9 +71,6 @@ function scrollToProjects() {
   });
 }
 
-
-
-
 const categoryButtons = document.querySelectorAll('#category-buttons button');
 const projectList = document.getElementById('project-list');
 
