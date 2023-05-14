@@ -42,6 +42,23 @@
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 767px) {
+  /* For devices with a maximum width of 767px */
+  #codewars a img {
+    /* Change the link for small badge */
+    content: url('https://www.codewars.com/users/CallMeSAUCE!/badges/small');
+  }
+}
+
+@media (min-width: 768px) {
+  /* For devices with a minimum width of 768px */
+  #codewars a img {
+    /* Change the link for large badge */
+    content: url('https://www.codewars.com/users/CallMeSAUCE!/badges/large');
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   #codewars {
     margin: 3rem 0;
