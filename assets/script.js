@@ -17,16 +17,19 @@ pride in my ability to <b>problem-solve</b> and deliver
 <b>high-quality</b> work. Thank you for taking the time to
 learn about my skills and experience. I'm excited to continue my
 journey and build websites that meet the needs of users.
-</p>`;
+</p>
+<br>
 
-const typedText = document.getElementById("typed-text");
+`;
 
-function type() {
+const textcontainer = document.getElementById("typed-text");
+
+function type(text,textcontainer) {
   let i = 0;
   const len = text.length;
   function update() {
     if (i <= len) {
-      typedText.innerHTML = text.slice(0, i);
+      textcontainer.innerHTML = text.slice(0, i);
       i++;
       requestAnimationFrame(update);
     }
@@ -34,7 +37,7 @@ function type() {
   requestAnimationFrame(update);
 }
 
-type();
+type(text,textcontainer);
 
 const projects = document.getElementById("projects");
 const scrollDownMsg = document.getElementById("scroll-message");
@@ -45,8 +48,15 @@ function animateProjects() {
 
   if (scrollPosition > projectsTop) {
     projects.classList.add("animate");
-  }
+  
 
+  }
+  const element = document.getElementById("codewars");
+    const position = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (position < windowHeight) {
+      element.classList.add("visible");
+    }
   const scrollPos = window.scrollY;
   // check if the user is at the top of the page
 

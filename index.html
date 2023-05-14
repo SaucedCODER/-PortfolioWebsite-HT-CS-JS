@@ -3,7 +3,9 @@
   <head>
     <title>ZMO Portfolio</title>
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/contact.css">
     <link rel="stylesheet" type="text/css" href="assets/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/codewar.css">
     <link rel="stylesheet" type="text/css" href="assets/scrollMess.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-H14oA6f9U26ROZT9c0cTmIwM/EY3Z6Qz9lg9b/vbE+0xh8wH7zJ0A67yPdRmPrvDZvJQcToZKj5fpeJZ1K3Kg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +17,7 @@
     <header>
 
       <div class="header-content">
-        <h1>ZMO_</h1>
+        <h1>Portfolio</h1>
       </div>
     </header>
 
@@ -33,12 +35,23 @@
         <!-- <div class="image-container">
           <img src="images/1683959833577.png" style="text-align:center; border-radius: 50%;" height='400'alt="my profile" >
         </div> -->
-        <img src="images/1683959833577.png"class="profile-pic" alt="My Profile Picture">
+        <img src="images/1683959678314.png"class="profile-pic" loding='lazy'alt="My Profile Picture">
         <h2>About Me</h2>
 
        
         <p id="typed-text" style="text-align:justify;"></p>
+        <div id="codewars">
+          <p style='text-align:center;'>Check out my Codewars account below to see my programming skills in action.</p>
+<br>
 
+          <h3>Codewars Rank:</h3>
+          <p id="rank"></p>
+          <a href="https://www.codewars.com/users/CallMeSAUCE!"
+            target="_blank"><img
+              src="https://www.codewars.com/users/CallMeSAUCE!/badges/large"
+              alt="Codewars Badge"
+          /></a>
+        </div>
       </section>
       <div id="scroll-message">
         <p>Scroll down to see more</p>
@@ -92,21 +105,18 @@
           </div>
         </section>
         
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="jane" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="jane.doe@example.com" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <input type="submit" value="Submit" />
-        </form>
-      </section>
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+            <input type="submit" value="Send Message" />
+          </form>
+        </section>
     </main>
     
     <footer>

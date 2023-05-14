@@ -66,11 +66,26 @@
   @media screen and (max-width: 768px) {
     #scroll-message p {
         font-size: 20px;
+        color: #000000; 
+      }
+      #scroll-message {
+  background-color: #ffffff; /* black background */
+  padding: .5em;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 9999;
       }
       
       .arrow {
+        
         width: 15px;
         height: 15px;
+        border: 2px solid #101010;
+        border-width: 0 5px 5px 0;
+        transform: rotate(45deg);
+        animation: arrow 2s ease-in-out infinite;
        
       }
+    
+      
   }
