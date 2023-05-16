@@ -7,19 +7,18 @@ html{
   box-sizing: border-box;
 }
 body {
-    font-size: 1.2rem;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
+    background-color: #000000;
+    color: #eaeaea;
   }
   
-  
+/*   
   header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-  }
+  } */
   .profile-pic {
     display: block;
     margin: 0 auto 40px;
@@ -27,19 +26,19 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #222;
+    border: 5px solid #dddddd;
     box-shadow: inset 1px 5px 10px rgba(255, 255, 255, .5);
     background-image: url('../images/1000005349.jpg');
     background-size: cover;
     background-position: top;
   }
   
-  
+
   .strong {
-    color: #ea8b86; /* red */
+    color: #ea8b86;
     font-weight: bold;
   }
-
+/*   
   nav {
     background-color: #f2f2f2;
     border-bottom: 1px solid #ccc;
@@ -66,10 +65,9 @@ body {
   nav a:hover {
     text-decoration: underline;
   }
-  
+   */
   main {
     max-width: 800px;
-
     margin: 0 auto;
     padding: 20px;
   }
@@ -90,7 +88,7 @@ body {
   }
 
   .getLink{
-    color: #171717 ;
+    color: greenyellow ;
   }
   .getLink:hover{
     color: #777 ;
@@ -100,7 +98,11 @@ body {
   }
       
   footer {
-    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #212529;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -109,7 +111,7 @@ body {
 @media only screen and (max-width: 784px) {
 
   header,h2 {
-    font-size: 1.5em !important;
+    font-size: 1.4em !important;
   }
   
   #about{

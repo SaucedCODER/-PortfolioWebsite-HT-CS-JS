@@ -67,9 +67,10 @@ function animateProjects() {
 
 window.addEventListener("scroll", animateProjects);
 
-function scrollToProjects() {
+function scrollToProjects(e) {
   // Get the Projects section element by its ID
-  const projectsSection = document.querySelector("#projects");
+  console.log(e.target.dataset.linkId);
+  const projectsSection = document.querySelector(`#${e.target.dataset.linkId}`);
 
   // Calculate the scroll position of the Projects section
   const scrollPosition = projectsSection.offsetTop - 20;
@@ -105,3 +106,10 @@ categoryButtons.forEach(button => {
     });
   });
 });
+
+
+// burger
+function toggleNav() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("menu-open");
+}

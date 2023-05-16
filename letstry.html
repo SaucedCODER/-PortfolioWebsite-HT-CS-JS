@@ -2,174 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-</head>
-<style>/* Reset styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Main styles */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
- /* Project section styles */
-
-#projects {
-  margin: 2.5em 0;
-}
-
-#projects h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #000;
-}
-
-#category-buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-#category-buttons button {
-  background-color: #333;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 12px 24px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#category-buttons button:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-#category-buttons button.active {
-  background-color: #fff;
-  color: #000;
-}
-
-#project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-}
-
-.project {
-  width: 350px;
-  background-color: #fff;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  padding: 24px;
-  transition: all 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #000;
-}
-
-.project p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #000;
-}
-
-.project a.project-link {
-  display: block;
-  text-align: right;
-  margin-top: 20px;
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.project a.project-link i {
-  margin-right: 10px;
-}
-
-.project a.project-link:hover {
-  color: #ccc;
-}
-
-@media screen and (max-width: 768px) {
-  .project {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #category-buttons {
-    flex-wrap: wrap;
-  }
-
-  #category-buttons button {
-    margin-bottom: 10px;
-  }
-}
-
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('path/to/parallax-image.jpg') center/cover fixed;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        .nav-link {
+            font-size: 18px;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
     </style>
+</head>
 <body>
-    <section id="projects">
-        <h2>My Projects</h2>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="projects" class="bg-dark text-light">
+        <h2 style="text-align: left;">My Projects</h2>
         
         <!-- Category buttons -->
-        <div id="category-buttons">
-          <button data-category="all" class="active">All</button>
-          <button data-category="cloned">Cloned Projects</button>
-          <button data-category="simple">Simple Projects</button>
-          <button data-category="hardcore">Hardcore Projects</button>
+        <div id="category-buttons" class="mb-3">
+          <button data-category="all" class="btn btn-light active">All</button>
+          <button data-category="cloned" class="btn btn-light">Cloned Projects</button>
+          <button data-category="simple" class="btn btn-light">Simple Projects</button>
+          <button data-category="hardcore" class="btn btn-light">Hardcore Projects</button>
         </div>
         
         <!-- Project list -->
         <div id="project-list">
-          <div class="project" data-category="cloned">
+          <div class="project text-light" data-category="cloned">
             <h3>Teacher Evaluation System</h3>
-            <p>I modified and improved a <a style='text-decoration: none;color:#ccc;' target='_blank' href="https://www.sourcecodester.com/php/14635/faculty-evaluation-system-using-phpmysqli-source-code.html"><strong class="getLink">free teacher evaluation system</strong></a> that I found online using HTML, CSS, JavaScript, and Bootstrap. I also added a password recovery email sender. This project gave me valuable experience in understanding the workflow of an existing project and learning new algorithms. I collaborated with a classmate who was also eager to learn.</p>
+            <p>I modified and improved a <a href="https://www.sourcecodester.com/php/14635/faculty-evaluation-system-using-phpmysqli-source-code.html" class="text-light" target="_blank"><strong class="getLink">free teacher evaluation system</strong></a> that I found online using HTML, CSS, JavaScript, and Bootstrap. I also added a password recovery email sender. This project gave me valuable experience in understanding the workflow of an existing project and learning new algorithms. I collaborated with a classmate who was also eager to learn.</p>
            
-            <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link">
+            <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link btn btn-light">
               <i class="fas fa-external-link-alt"></i>
               View Project
             </a>
           </div>
-          <div class="project" data-category="simple">
+          <div class="project text-light" data-category="simple">
             <h3>Calculator Apps</h3>
             <p>I developed two calculator apps using JavaScript, CSS, and HTML. The first version was built without external resources, while the second version incorporated learnings from the first attempt, including the importance of researching and leveraging existing knowledge. By showcasing both versions, I demonstrate my growth as a developer and dedication to continuous improvement.</p>
           
-            <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link">
+            <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link btn btn-light">
               <i class="fas fa-external-link-alt"></i>
               View Project
             </a>
           </div>
-          <div class="project" data-category="hardcore">
+          <div class="project text-light" data-category="hardcore">
             <h3>Landing Page 1</h3>
             <p>I cloned a simple landing page from frontendpractice.com, a website where you can practice your frontend skills by cloning various designs. The landing page is now part of my project portfolio.</p>
       
-            <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link">
+            <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link btn btn-light">
               <i class="fas fa-external-link-alt"></i>
               View Project
             </a>
@@ -178,5 +106,18 @@
         </div>
       </section>
       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
