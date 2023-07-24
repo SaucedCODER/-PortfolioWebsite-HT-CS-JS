@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZMO Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/contact.css">
+    <link rel="stylesheet" type="text/css" href="assets/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/codewar.css">
+    <link rel="stylesheet" type="text/css" href="assets/scrollMess.css">
+    <link rel="stylesheet" type="text/css" href="assets/header.css">
+    <link rel="stylesheet" type="text/css" href="assets/fillAnimation.css">
+
+
+  
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="text-light">
+ 
+
+    
+    <header class="header">
+      <div class="header-content">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+              <a class="navbar-brand"style="color:yellowgreen;" href="#"><i class="fa-brands fa-js fa-2xs" style="color: #0087fd">ZMODev</i></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div style="background: transparent;" class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link"data-link-id='about' href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link"data-link-id='projects' href="#" onclick="scrollToProjects(event)">Projects</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link"onclick="scrollToProjects(event)" data-link-id='contact'href="#">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+          <!-- <video autoplay muted loop>
+              <source src="images/pexels-nicola-narracci-16634057-1920x1080-30fps.mp4" type="video/mp4">
+          </video> -->
+      </div>
+      <main style="margin-top: 5em;">
+        <section id="about">
+        <!-- <div class="image-container">
+          <img src="images/1683959833577.png" style="text-align:center; border-radius: 50%;" height='400'alt="my profile" >
+        </div> -->
+        <div class="profile-container">
+          <img src="images/zeusprofilesmile.png" class="profile-pic" loading="lazy" alt="My Profile Picture">
+          <div class="profile-overlay"></div>
+          <i class="profile-icon fas fa-coffee">break</i>
+        </div>
+        
+        
+        
+        <h2>About Me</h2>
+
+        <!-- <p>
+          <span class="web-developer-text">
+                <span class="animated-text">Hi there👋, I'm Zeus Miguel Orilla, a Web Developer</span>
+              </span> passionate about creating
+          <b>dynamic</b> and <b>user-friendly</b> websites.
+           I have experience with
+          <b>databases</b>, <b>DOM manipulation</b>, and
+          <b>server-side scripting</b>, and I'm always exploring new
+          technologies to enhance my skills.
+          </p>
+          <br>
+          <p>
+             -->
+        <p id="typed-text" style="text-align:justify;"></p>
+  
+      </section>
+      <p></p>
+      </main>
+      
+  </header>
+  
+   
+
+    <main>
+      <section class="text-light">
+        
+      <div class="portfolio-introduction">
+      
+        <p>My areas of expertise include:</p>
+        
+        <div class="icon-container">
+          <ul class="icon-grid">
+            <li>
+              <div class="icon-item" style="background-color: #e34c26;">
+                <i class="fab fa-html5"></i>
+                <div class="tooltipExp">HyperText Markup Language</div>
+              </div>
+              <span class="icon-label">HTML</span>
+            </li>
+            <li>
+              <div class="icon-item" style="background-color: #2965f1;">
+                <i class="fab fa-css3-alt"></i>
+                <div class="tooltipExp">Cascading Style Sheets</div>
+              </div>
+              <span class="icon-label">CSS</span>
+            </li>
+            <li>
+              <div class="icon-item" style="background-color: #f0db4f;">
+                <i class="fab fa-js"></i>
+                <div class="tooltipExp">JavaScript</div>
+              </div>
+              <span class="icon-label">JavaScript</span>
+            </li>
+            <li>
+              <div class="icon-item" style="background-color: #7377ad;">
+                <i class="fab fa-php"></i>
+                <div class="tooltipExp">Hypertext Preprocessor</div>
+              </div>
+              <span class="icon-label">PHP</span>
+            </li>
+            <li>
+              <div class="icon-item" style="background-color: #00758f;">
+                <i class="fas fa-database"></i>
+                <div class="tooltipExp">Structured Query Language</div>
+              </div>
+              <span class="icon-label">MySQL</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+          
+          <div id="codewars" >
+
+          
+        <p style='text-align:center;'>Check out my Codewars account below to see my programming skills in action.</p>
+<br>
+
+        <h3>Codewars Rank:</h3>
+        <p id="rank"></p>
+        <a href="https://www.codewars.com/users/CallMeSAUCE!"
+          target="_blank"><img
+            src="https://www.codewars.com/users/CallMeSAUCE!/badges/large"
+            alt="Codewars Badge"
+        /></a>
+      </div>
+
+      </section>
+      
+      <div id="scroll-message">
+        <p>Scroll down to see more</p>
+        <div class="arrow"></div>
+      </div>
+  
+        <section id="projects" >
+          <h2 style="text-align: left;">Projects <br> <sub style="font-size:medium;font-weight:normal;color:rgb(200, 200, 200);">A collection of my past projects </sub></h2>
+          
+          
+          <!-- Category buttons -->
+          <div id="category-buttons">
+            <button data-category="all" class="active">All</button>
+            <button data-category="cloned">Cloned Projects</button>
+            <button data-category="simple">Simple Projects</button>
+            <button data-category="hardcore">Hardcore Projects</button>
+          </div>
+          
+          <!-- Project list -->
+          <div id="project-list" >
+            <div class="project" data-category="cloned">
+              <h3>Teacher Evaluation System</h3>
+          <p >I modified and improved a <a  style='text-decoration: none;color:#fdfdfd;'target='_blank'href="https://www.sourcecodester.com/php/14635/faculty-evaluation-system-using-phpmysqli-source-code.html"><strong class="getLink">free teacher evaluation system</strong></a> that I found online using HTML, CSS, JavaScript, and Bootstrap. I also added a password recovery email sender. This project gave me valuable experience in understanding the workflow of an existing project and learning new algorithms. I collaborated with a classmate who was also eager to learn.</p>
+         
+          <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i>
+            View Project
+          </a>
+            </div>
+            <div class="project" data-category="simple">
+              <h3>Calculator Apps</h3>
+              <p>I developed two calculator apps using JavaScript, CSS, and HTML. The first version was built without external resources, while the second version incorporated learnings from the first attempt, including the importance of researching and leveraging existing knowledge. By showcasing both versions, I demonstrate my growth as a developer and dedication to continuous improvement.</p>
+            
+              <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                View Project
+              </a>
+            </div>
+            <div class="project" data-category="hardcore">
+              <h3>Landing Page 1</h3>
+              <p>I cloned a simple landing page from frontendpractice.com, a website where you can practice your frontend skills by cloning various designs. The landing page is now part of my project portfolio.</p>
+    
+            
+                <a href="http://ctesibsma2023.infinityfreeapp.com" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  View Project
+                </a>
+                
+              </a>
+            </div>
+            <!-- more projects here -->
+          </div>
+        </section>
+        
+       
+    </main>
+    
+    <footer>
+      <section id="contact" > 
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+      </section>
+      <p>&copy; 2023 Zeus Project Portfolio.</p>
+    </footer>
+  
+    
+  </body>
+</html>
