@@ -1,10 +1,9 @@
 const text = `<p>
-Hi there, I'm <b>Zeus Miguel Orilla</b>, a
-<b>web developer</b> passionate about creating
+<span class="web-developer-text">
+      <span class="animated-text">Hi there👋, I'm Zeus Miguel Orilla, a Web Developer</span>
+    </span> passionate about creating
 <b>dynamic</b> and <b>user-friendly</b> websites.
-My areas of expertise include <b>HTML</b>,
-<b>CSS</b>, <b>JavaScript</b>, and
-<b>PHP</b>. I have experience with
+ I have experience with
 <b>databases</b>, <b>DOM manipulation</b>, and
 <b>server-side scripting</b>, and I'm always exploring new
 technologies to enhance my skills.
@@ -24,9 +23,10 @@ journey and build websites that meet the needs of users.
 
 const textcontainer = document.getElementById("typed-text");
 
-function type(text,textcontainer) {
+function type(text, textcontainer) {
   let i = 0;
   const len = text.length;
+  textcontainer.style.fontSize = "1.3rem";
   function update() {
     if (i <= len) {
       textcontainer.innerHTML = text.slice(0, i);
@@ -37,26 +37,24 @@ function type(text,textcontainer) {
   requestAnimationFrame(update);
 }
 
-type(text,textcontainer);
+type(text, textcontainer);
 
 const projects = document.getElementById("projects");
 const scrollDownMsg = document.getElementById("scroll-message");
 
 function animateProjects() {
   const projectsTop = projects.offsetTop;
-  const scrollPosition = window.pageYOffset + window.innerHeight;
+  const scrollPosition = window.scrollY + window.innerHeight;
 
   if (scrollPosition > projectsTop) {
     projects.classList.add("animate");
-  
-
   }
   const element = document.getElementById("codewars");
-    const position = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (position < windowHeight) {
-      element.classList.add("visible");
-    }
+  const position = element.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  if (position < windowHeight) {
+    element.classList.add("visible");
+  }
   const scrollPos = window.scrollY;
   // check if the user is at the top of the page
 
@@ -82,31 +80,30 @@ function scrollToProjects(e) {
   });
 }
 
-const categoryButtons = document.querySelectorAll('#category-buttons button');
-const projectList = document.getElementById('project-list');
+const categoryButtons = document.querySelectorAll("#category-buttons button");
+const projectList = document.getElementById("project-list");
 
 // Add click event listeners to the category buttons
-categoryButtons.forEach(button => {
-  button.addEventListener('click', () => {
+categoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
     // Remove active class from all buttons
-    categoryButtons.forEach(btn => btn.classList.remove('active'));
+    categoryButtons.forEach((btn) => btn.classList.remove("active"));
     // Add active class to the clicked button
-    button.classList.add('active');
+    button.classList.add("active");
 
     // Get the selected category
     const category = button.dataset.category;
 
     // Show/hide projects based on the selected category
-    projectList.querySelectorAll('.project').forEach(project => {
-      if (category === 'all' || project.dataset.category === category) {
-        project.style.display = 'block';
+    projectList.querySelectorAll(".project").forEach((project) => {
+      if (category === "all" || project.dataset.category === category) {
+        project.style.display = "block";
       } else {
-        project.style.display = 'none';
+        project.style.display = "none";
       }
     });
   });
 });
-
 
 // burger
 function toggleNav() {

@@ -1,0 +1,42 @@
+  /* Web Developer text */
+  .web-developer-text {
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Animation */
+  @keyframes fillAnimation {
+    0% {
+      background-position: -100% 50%;
+    }
+    50% {
+      background-position: 0 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes hashAnimation {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  /* Apply gradient background to the Web Developer text */
+  .animated-text {
+    background: linear-gradient(45deg, #5ab9ea, #8b5cc2, #e25c6e, #ffaf65);
+    background-size: 200% 100%;
+    background-position: -100% 50%;
+    color: transparent;
+    font-size: 18px;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fillAnimation 7s linear infinite;
+  }
