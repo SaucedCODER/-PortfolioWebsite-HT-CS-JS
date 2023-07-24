@@ -44,8 +44,8 @@
   }
   
   #category-buttons button.active {
-    background-color: #fff;
-    color: #000;
+    background-color: #4167f3;
+    color: #ffffff;
   }
   
   #project-list {
@@ -78,9 +78,10 @@
   .project p {
     font-size: 1.2rem;
     line-height: 1.6;
+    
   }
   
-  .project a.project-link {
+  .project span.project-link {
     display: block;
     text-align: right;
     margin-top: 20px;
@@ -88,14 +89,17 @@
     font-size: 16px;
     font-weight: 700;
     transition: all 0.3s ease;
+    color: rgb(40, 40, 255);
+    cursor: pointer;
   }
   
-  .project a.project-link i {
+  .project span.project-link i {
     margin-right: 10px;
+    color: rgb(40, 40, 255);
   }
   
-  .project a.project-link:hover {
-    color: #ccc;
+  .project span.project-link:hover {
+    color: #ccc !important;
   }
   
   @media screen and (max-width: 768px) {

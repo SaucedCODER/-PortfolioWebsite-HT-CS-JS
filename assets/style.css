@@ -39,9 +39,9 @@ body {
 /* Container for the profile picture */
 /* Container for the profile picture */
 .profile-container {
-  margin:2rem auto;
-  width: 250px;
-  height: 250px;
+  margin:2.5rem auto;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   background-color: #f1f1f1;
   overflow: hidden;
@@ -156,7 +156,7 @@ body {
 }
 
 .icon-grid li:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .icon-item {
@@ -194,6 +194,46 @@ body {
 }
 
 
+/* Responsive Adjustments for the codes above */
+@media (max-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 20px;
+  }
+
+  .icon-item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-item i {
+    font-size: 30px;
+  }
+
+  .tooltipExp {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+    gap: 5px;
+  }
+
+  .icon-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-item i {
+    font-size: 20px;
+  }
+
+  .tooltipExp {
+    font-size: 12px;
+  }
+}
 
 
   main {

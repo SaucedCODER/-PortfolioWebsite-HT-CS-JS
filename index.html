@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="assets/scrollMess.css">
     <link rel="stylesheet" type="text/css" href="assets/header.css">
     <link rel="stylesheet" type="text/css" href="assets/fillAnimation.css">
+    <link rel="stylesheet" type="text/css" href="assets/demoLive.css">
+
 
 
   
@@ -174,33 +176,34 @@
           
           <!-- Project list -->
           <div id="project-list" >
-            <div class="project" data-category="cloned">
+            <div class="project" data-category="hardcore">
               <h3>Teacher Evaluation System</h3>
           <p >I modified and improved a <a  style='text-decoration: none;color:#fdfdfd;'target='_blank'href="https://www.sourcecodester.com/php/14635/faculty-evaluation-system-using-phpmysqli-source-code.html"><strong class="getLink">free teacher evaluation system</strong></a> that I found online using HTML, CSS, JavaScript, and Bootstrap. I also added a password recovery email sender. This project gave me valuable experience in understanding the workflow of an existing project and learning new algorithms. I collaborated with a classmate who was also eager to learn.</p>
          
-          <a href="#" target="_blank" class="project-link">
+          <span class="project-link" onclick="openModal('TES20')">
             <i class="fas fa-external-link-alt"></i>
-            View Project
-          </a>
+            Demo Live Preview
+          </span>
             </div>
             <div class="project" data-category="simple">
               <h3>Calculator Apps</h3>
               <p>I developed two calculator apps using JavaScript, CSS, and HTML. The first version was built without external resources, while the second version incorporated learnings from the first attempt, including the importance of researching and leveraging existing knowledge. By showcasing both versions, I demonstrate my growth as a developer and dedication to continuous improvement.</p>
             
-              <a href="#" target="_blank" class="project-link">
+              <span class="project-link"  onclick="openModal('CAlC1')">
                 <i class="fas fa-external-link-alt"></i>
-                View Project
-              </a>
+                Demo Live Preview
+
+              </span>
             </div>
-            <div class="project" data-category="hardcore">
+            <div class="project" data-category="cloned">
               <h3>Landing Page 1</h3>
               <p>I cloned a simple landing page from frontendpractice.com, a website where you can practice your frontend skills by cloning various designs. The landing page is now part of my project portfolio.</p>
     
             
-                <a href="#" target="_blank" class="project-link">
+                <span class="project-link" onclick="openModal('cloned1')">
                   <i class="fas fa-external-link-alt"></i>
-                  View Project
-                </a>
+                  Demo Live Preview
+                </span>
                 
               </a>
             </div>
@@ -226,7 +229,64 @@
       </section>
       <p>&copy; 2023 Zeus Project Portfolio.</p>
     </footer>
-  
-    
+   
+    <!-- Modals DEMO LIVE HaRdcore-->
+    <div class="modalz" id="TES20">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('TES20')"
+          >&times;</span
+        >
+        <h2 class="animated-text">Teacher Evaluation System 2022| Modified Project</h2>
+        <div class="gif-demo">
+          <img
+            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmFneW1zZzBxejV1OXRudG54YzJ2YWV0ZTNhODFxNmxvZGxobjF4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Fs35xNxHN9fEfKEOog/giphy.gif"
+            alt="Instrument Landing Page"
+          />
+        </div>
+        <div class="like-button liikkee">
+          <i class="far fa-heart liikkee"></i>
+        </div>
+        <div class="like-tooltip">Click to Like</div>
+      </div>
+    </div>
+     <!-- Modals DEMO LIVE cloned-->
+     <div class="modalz" id="cloned1">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('cloned1')"
+          >&times;</span
+        >
+        <h2 class="animated-text">Instrument Landing Page | Cloned Project from Frontendpractice.com</h2>
+        <div class="gif-demo">
+          <img
+            src="https://media.giphy.com/media/4wsuoHB9XFW6XAVJGS/giphy.gif"
+            alt="Instrument Landing Page"
+          />
+        </div>
+        <div class="like-button liikkee">
+          <i class="far fa-heart liikkee"></i>
+        </div>
+        <div class="like-tooltip">Click to Like</div>
+      </div>
+    </div>
+     <!-- Modals DEMO LIVE Simple-->
+
+        <div class="modalz" id="CAlC1">
+          <div class="modal-content">
+            <span class="close-button" onclick="closeModal('CAlC1')"
+              >&times;</span
+            >
+            <h2 class="animated-text">Calculator App | using Object Oriented Programming Approach bare coded</h2>
+            <div class="gif-demo">
+              <img
+                src="https://media.giphy.com/media/KBgNtWR57taSnVYPoU/giphy.gif"
+                alt="Calculator app"
+              />
+            </div>
+            <div class="like-button liikkee" >
+              <i class="far fa-heart liikkee"></i>
+            </div>
+            <div class="like-tooltip">Click to Like</div>
+          </div>
+        </div>
   </body>
 </html>

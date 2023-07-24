@@ -110,3 +110,37 @@ function toggleNav() {
   const menu = document.getElementById("menu");
   menu.classList.toggle("menu-open");
 }
+
+// Demo Live Scripts
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  document.body.classList.add("modal-open");
+  modal.style.display = "block";
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  document.body.classList.remove("modal-open");
+  modal.style.display = "none";
+}
+
+document.addEventListener("click", function (event) {
+  const target = event.target;
+  if (target.classList.contains("liikkee")) {
+    const modal = target.closest(".modalz");
+    if (modal) {
+      const likeButton = modal.querySelector(".like-button");
+      likeButton.classList.toggle("liked");
+      showLikeTooltip(modal);
+    }
+  }
+});
+
+// Function to show the like tooltip and handle "like" action
+function showLikeTooltip(modal) {
+  const likeTooltip = modal.querySelector(".like-tooltip");
+  likeTooltip.textContent = "Liked!";
+  setTimeout(function () {
+    likeTooltip.textContent = "Click to Like";
+  }, 2000);
+}
