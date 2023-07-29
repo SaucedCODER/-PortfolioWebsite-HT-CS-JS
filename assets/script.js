@@ -8,21 +8,23 @@ const text = `<p>
 <b>server-side scripting</b>, and I'm always exploring new
 technologies to enhance my skills.
 </p>
-<br>
-<p>
+
+<p class="lowOpa">
 My goal as a web developer is to create <b>scalable</b> and
 <b>efficient</b> websites with intuitive interfaces. I take
 pride in my ability to <b>problem-solve</b> and deliver
-<b>high-quality</b> work. Thank you for taking the time to
+<b>high-quality</b> work. <p class="lowOpa">Thank you for taking the time to
 learn about my skills and experience. I'm excited to continue my
 journey and build websites that meet the needs of users.
+</p>
 </p>
 <br>
 
 `;
 
 const textcontainer = document.getElementById("typed-text");
-
+let istypingcompleted = false;
+let animationFrameId;
 function type(text, textcontainer) {
   let i = 0;
   const len = text.length;
@@ -31,13 +33,28 @@ function type(text, textcontainer) {
     if (i <= len) {
       textcontainer.innerHTML = text.slice(0, i);
       i++;
-      requestAnimationFrame(update);
+      animationFrameId = requestAnimationFrame(update);
     }
   }
-  requestAnimationFrame(update);
+  animationFrameId = requestAnimationFrame(update);
 }
-
+function instantlyTyped(text, textcontainer) {
+  textcontainer.style.fontSize = "1.3rem";
+  textcontainer.innerHTML = text; // Set the entire text at once
+}
 type(text, textcontainer);
+
+document.addEventListener("click", function () {
+  console.log("click");
+  if (!istypingcompleted) {
+    console.log("work");
+    cancelAnimationFrame(animationFrameId);
+
+    instantlyTyped(text, textcontainer);
+    istypingcompleted = true;
+  }
+  // Call the type function on click
+});
 
 const projects = document.getElementById("projects");
 const scrollDownMsg = document.getElementById("scroll-message");
@@ -143,4 +160,20 @@ function showLikeTooltip(modal) {
   setTimeout(function () {
     likeTooltip.textContent = "Click to Like";
   }, 2000);
+}
+
+// JavaScript for the crack animation
+function crackAnimation(event) {
+  const link = event.currentTarget;
+
+  // Add the "cracked" class to trigger the animation
+  link.classList.add("cracked");
+
+  // After the animation is complete, remove the "cracked" class to reset the animation
+  setTimeout(() => {
+    link.classList.remove("cracked");
+  }, 2000);
+
+  // Prevent the link from being followed immediately
+  event.preventDefault();
 }

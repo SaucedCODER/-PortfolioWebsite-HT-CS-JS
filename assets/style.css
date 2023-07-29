@@ -269,8 +269,9 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #212529;
+    margin-top: 2rem;
     color: #fff;
-    padding: 10px;
+    padding: 1em ;
     text-align: center;
   }
   /* Responsive styles */
@@ -310,10 +311,11 @@ body {
 }
 #typed-text {
   position: relative;
-  min-height: 500px;
   z-index: 1;
 }
-
+.low-opa{
+  opacity: .7;
+}
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
@@ -325,4 +327,80 @@ body {
   from, to { border-color: transparent }
   50% { border-color: rgb(21, 21, 21) }
 }
+}
+
+ /* Additional styles for the social link text */
+ .separator {
+  border-top: 4px solid #ddd;
+ 
+}
+ #social-links i {
+  font-size: 30px !important;
+ }
+ #social-links a:nth-child(1){
+  background-color: #000000;
+
+ }
+ #social-links a{
+  position: relative; /* Add relative positioning */
+  display: inline-block;
+  margin: 1rem;
+  background-color: #100586;
+
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.2s;
+  overflow: hidden; /* Hide the tooltip overflow */
+}
+
+/* Style for the social link text */
+#social-links a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+
+#social-links a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add a more prominent box shadow on hover */
+}
+
+#social-links a:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -60%); /* Adjust the position of the tooltip on hover */
+}
+
+/* Cracking animation */
+@keyframes crack {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-4px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.cracked {
+  animation: crack 0.5s linear;
 }
