@@ -313,7 +313,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.low-opa{
+.lowOpa{
   opacity: .7;
 }
 /* The typing effect */
