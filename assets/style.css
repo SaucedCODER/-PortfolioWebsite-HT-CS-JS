@@ -12,32 +12,51 @@ body {
     color: #eaeaea;
     
   }
-  
-/*   
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  } */
-  /* .profile-pic {
-    display: block;
-    margin: 40px auto 40px;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-    
-
-
-    box-shadow: inset 1px 5px 10px rgba(255, 255, 255, 0.5) ;
-    background-color: #fbfbfb;
-    background-size: cover;
-    background-position: top;
+  /* //marking styles*/
+  .circle-sketch-highlight {
+    position: relative;
+    left: 0.5em;
+    font-family: Libre Franklin;
+    font-size: 32px;
+    font-weight: 500;
   }
-   */
-/* Container for the profile picture */
-/* Container for the profile picture */
+  .circle-sketch-highlight:before {
+    content: "";
+    z-index: -1;
+    left: -0.5em;
+    top: -0.1em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ff04dea8;
+    position: absolute;
+    border-right-color: transparent;
+    width: 100%;
+    height: 1em;
+    transform: rotate(2deg);
+    opacity: 0.7;
+    border-radius: 50%;
+    padding: 0.1em 0.25em;
+  }
+  .circle-sketch-highlight:after {
+    content: "";
+    z-index: -1;
+    left: -0.5em;
+    top: 0.1em;
+    padding: 0.1em 0.25em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #b326ff7c;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    transform: rotate(-1deg);
+    opacity: 0.7;
+    border-radius: 50%;
+  }
+  
+  
 .profile-container {
   margin:4rem auto;
   width: 160px;
