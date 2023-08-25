@@ -39,19 +39,18 @@ body {
 /* Container for the profile picture */
 /* Container for the profile picture */
 .profile-container {
-  margin:2.5rem auto;
-  width: 230px;
-  height: 230px;
+  margin:4rem auto;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background-color: #f1f1f1;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(248, 245, 245, 0.1);
+  outline: 1rem solid rgba(44, 44, 44, 0.54);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-
 /* Profile picture */
 .profile-pic {
   width: 100%;

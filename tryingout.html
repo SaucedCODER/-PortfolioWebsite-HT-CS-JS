@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Your global styles here */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .dark-mode {
+        background-color: #111;
+        color: #fff;
+      }
+      .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #3490dc;
+      }
+      .highlight {
+        color: #ff9900;
+      }
+      .about-me-intro {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .more-about-me-link {
+        color: #3490dc;
+        cursor: pointer;
+        text-decoration: underline;
+        display: block;
+        margin-top: 10px;
+      }
+      .about-me-details {
+        display: none;
+        margin-top: 10px;
+      }
+      .about-me-text {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-me-container dark-mode">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-me-content">
+        <p class="about-me-intro">
+          Kamusta! I'm <span class="highlight">Zeus Miguel Orilla</span>, a tech
+          enthusiast with a hint of shyness. My journey into the world of coding
+          and design began not too long ago, sparked by a fascination for
+          technology and the desire to create digital wonders.
+        </p>
+        <a class="more-about-me-link" onclick="expandAboutMe()"
+          >More About Me</a
+        >
+        <div class="about-me-details hidden">
+          <p class="about-me-text">
+            Like a curious explorer, I embarked on my coding adventure earlier
+            this year. Armed with determination and a keyboard, I delved into
+            Scrimba, learning the art of web development. The virtual world
+            unfolded before me, and I couldn't resist diving into HTML, CSS, and
+            JavaScript.
+          </p>
+          <p class="about-me-text">
+            My coding journey feels a lot like learning to play my favorite
+            tunes on the guitar—challenging but oh-so-rewarding. With each
+            project I've crafted, from basic HTML to dynamic ReactJS apps, I've
+            found a rhythm that keeps me going.
+          </p>
+          <p class="about-me-text">
+            The elegant dance of TailwindCSS and the power of ReactJS have
+            become my companions on this journey. Every line of code I write is
+            an expression of my passion and eagerness to contribute positively
+            to the tech universe.
+          </p>
+          <p class="about-me-text">
+            I'm not just seeking a front-end career; I'm yearning for a canvas
+            to paint my digital dreams. I want to meld creativity with
+            technology, to craft interfaces that make users smile and simplify
+            their lives.
+          </p>
+          <p class="about-me-text">
+            Salamat for joining me on this adventure! Let's harness the magic of
+            technology while keeping our roots grounded. Tara, let's shape a
+            digital world that's user-friendly, inviting, and infused with
+            Filipino awesomeness!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function expandAboutMe() {
+        const aboutMeDetails = document.querySelector(".about-me-details");
+        const moreAboutMeLink = document.querySelector(".more-about-me-link");
+
+        aboutMeDetails.classList.toggle("hidden");
+        if (aboutMeDetails.classList.contains("hidden")) {
+          moreAboutMeLink.textContent = "More About Me";
+        } else {
+          moreAboutMeLink.textContent = "Less About Me";
+        }
+      }
+    </script>
+  </body>
+</html>

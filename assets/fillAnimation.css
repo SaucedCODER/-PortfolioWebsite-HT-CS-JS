@@ -4,6 +4,10 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+    width: 100%;
   }
 
   /* Animation */
@@ -34,8 +38,7 @@
     background-size: 200% 100%;
     background-position: -100% 50%;
     color: transparent;
-    font-size: 18px;
-
+    font-size: clamp(20px,50%,1.3rem);
     -webkit-background-clip: text;
     background-clip: text;
     animation: fillAnimation 7s linear infinite;

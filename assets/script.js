@@ -1,49 +1,51 @@
-const text = `<p>
-<span class="web-developer-text">
-      <span class="animated-text">Hi there👋, I'm Zeus Miguel Orilla, a Web Developer</span>
-    </span> passionate about creating
-<b>dynamic</b> and <b>user-friendly</b> websites.
- I have experience with
-<b>databases</b>, <b>DOM manipulation</b>, and
-<b>server-side scripting</b>, and I'm always exploring new
-technologies to enhance my skills.
-</p>
+const text = ` <span class="web-developer-text">
+<span id="animated-text" style="font-size:clamp(25px,50%,1.5rem)">Hi there👋, I'm Zeus Miguel Orilla</span>
 
-<p class="lowOpa">
-My goal as a web developer is to create <b>scalable</b> and
-<b>efficient</b> websites with intuitive interfaces. I take
-pride in my ability to <b>problem-solve</b> and deliver
-<b>high-quality</b> work. <p class="lowOpa">Thank you for taking the time to
-learn about my skills and experience. I'm excited to continue my
-journey and build websites that meet the needs of users.
+</span>
+<br/>
+<p style="text-align:center;font-style:italic;color:#e6e6e6;">
+Passionate about making dynamic and user-friendly websites. I know databases, changing how pages look, and doing things on the server. I'm always learning new tech to get even better.
 </p>
+ <p style="text-align:center;font-style:italic;color:#e6e6e6;">
+"My goal as a web maker is to make big and fast websites that are easy to use. I'm proud of fixing problems and making things great."
 </p>
-<br>
-
+<p style="text-align:center;font-style:italic;color:#e6e6e6;">
+Thanks for reading about me. I'm excited to keep going and make websites that people really like.
+</p>
 `;
 
 const textcontainer = document.getElementById("typed-text");
 let istypingcompleted = false;
 let animationFrameId;
+
+// Split the text into an array of words
+const words = text.trim().split(/\s+/);
+let currentWordIndex = 0;
+
 function type(text, textcontainer) {
-  let i = 0;
-  const len = text.length;
-  textcontainer.style.fontSize = "1.3rem";
-  function update() {
-    if (i <= len) {
-      textcontainer.innerHTML = text.slice(0, i);
-      i++;
-      animationFrameId = requestAnimationFrame(update);
-    }
+  const word = words[currentWordIndex];
+  if (!word) {
+    istypingcompleted = true;
+    textcontainer.children[0].classList.add("animated-text"); // Add the class to the text container
+    return;
   }
-  animationFrameId = requestAnimationFrame(update);
+  textcontainer.style.fontSize = "clamp(20px,50%,1.3rem)";
+  textcontainer.innerHTML = text + " " + word;
+
+  currentWordIndex++;
+  animationFrameId = requestAnimationFrame(() =>
+    setTimeout(() => {
+      type(text + " " + word, textcontainer);
+    }, 100)
+  );
 }
+
 function instantlyTyped(text, textcontainer) {
-  textcontainer.style.fontSize = "1.3rem";
+  textcontainer.style.fontSize = "clamp(20px,50%,1.3rem)";
   textcontainer.innerHTML = text; // Set the entire text at once
 }
-type(text, textcontainer);
 
+type("", textcontainer);
 document.addEventListener("click", function () {
   console.log("click");
   if (!istypingcompleted) {
