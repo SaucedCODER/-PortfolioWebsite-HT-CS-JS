@@ -1,4 +1,4 @@
-const text = ` <span class="web-developer-text">
+const text = `<span class="web-developer-text">
 <span id="animated-text" style="font-size:clamp(25px,50%,1.5rem)">Hi there👋, I'm Zeus</span>
 
 </span>
@@ -41,6 +41,7 @@ function type(text, textcontainer) {
 function instantlyTyped(text, textcontainer) {
   textcontainer.style.fontSize = "clamp(20px,50%,1.3rem)";
   textcontainer.innerHTML = text; // Set the entire text at once
+  textcontainer.children[0].classList.add("animated-text");
 }
 
 type("", textcontainer);
