@@ -195,12 +195,34 @@
 
               </span>
             </div>
+            <div class="project" data-category="simple">
+              <h3 class="circle-sketch-highlight">Simple Todolist App</h3>
+
+              <p>Straightforward todo list,I employed functional programming for clear readability and easy maintenance. With local storage integration, this project showcases my focus on user-friendly and efficient solutions.</p>
+            
+              <span class="project-link"  onclick="openModal('simpleTodo')">
+                <i class="fas fa-external-link-alt"></i>
+                Demo Live Preview
+              </span>
+            </div>
             <div class="project" data-category="cloned">
               <h3 class="circle-sketch-highlight">Landing Page 1</h3>
               <p>I cloned a simple landing page from frontendpractice.com, a website where you can practice your frontend skills by cloning various designs. The landing page is now part of my project portfolio.</p>
     
             
                 <span class="project-link" onclick="openModal('cloned1')">
+                  <i class="fas fa-external-link-alt"></i>
+                  Demo Live Preview
+                </span>
+                
+              </a>
+            </div>
+            <div class="project" data-category="cloned">
+              <h3 class="circle-sketch-highlight">TimeTrack Cloned</h3>
+              <p>A web app for managing time and tasks. Built with CSS Grid and dynamic JSON data, it's all about organization. Cloned from frontendmentor.io, it flaunts responsive design and real-time data handling prowess..</p>
+    
+            
+                <span class="project-link" onclick="openModal('cloned2')">
                   <i class="fas fa-external-link-alt"></i>
                   Demo Live Preview
                 </span>
@@ -269,11 +291,17 @@
             alt="Instrument Landing Page"
           />
         </div>
-        <div class="like-button liikkee">
-          <i class="far fa-heart liikkee"></i>
+         <div class="interaction-section">
+          <div class="like-button liikkee">
+            <i class="far fa-heart liikkee"></i>
+          </div>
+          <div class="like-tooltip">Click to Like</div>
+          <a class="fork-repo-link" href="https://github.com/your-username/calculator-app/fork" target="_blank">
+            <i class="fas fa-code-branch"></i> Fork on GitHub
+          </a>
         </div>
-        <div class="like-tooltip">Click to Like</div>
       </div>
+
     </div>
      <!-- Modals DEMO LIVE cloned-->
      <div class="modalz" id="cloned1">
@@ -288,31 +316,78 @@
             alt="Instrument Landing Page"
           />
         </div>
-        <div class="like-button liikkee">
-          <i class="far fa-heart liikkee"></i>
+        <div class="interaction-section">
+          <div class="like-button liikkee">
+            <i class="far fa-heart liikkee"></i>
+          </div>
+          <div class="like-tooltip">Click to Like</div>
+          <a class="fork-repo-link" href="https://github.com/Callmesauce/Clooning.git" target="_blank">
+            <i class="fas fa-code-branch"></i> Fork on GitHub
+          </a>
         </div>
-        <div class="like-tooltip">Click to Like</div>
       </div>
+
     </div>
      <!-- Modals DEMO LIVE Simple-->
 
-        <div class="modalz" id="CAlC1">
-          <div class="modal-content">
-            <span class="close-button" onclick="closeModal('CAlC1')"
-              >&times;</span
-            >
-            <h2 class="animated-text">Calculator App | using Object Oriented Programming Approach bare coded</h2>
-            <div class="gif-demo">
-              <img
-                src="https://media.giphy.com/media/KBgNtWR57taSnVYPoU/giphy.gif"
-                alt="Calculator app"
-              />
-            </div>
-            <div class="like-button liikkee" >
-              <i class="far fa-heart liikkee"></i>
-            </div>
-            <div class="like-tooltip">Click to Like</div>
-          </div>
+     <div class="modalz" id="CAlC1">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('CAlC1')">&times;</span>
+        <h2 class="animated-text">Calculator App | using Object Oriented Programming Approach bare coded</h2>
+        <div class="gif-demo">
+          <img src="https://media.giphy.com/media/KBgNtWR57taSnVYPoU/giphy.gif" alt="Calculator app" />
         </div>
+        <div class="interaction-section">
+          <div class="like-button liikkee">
+            <i class="far fa-heart liikkee"></i>
+          </div>
+          <div class="like-tooltip">Click to Like</div>
+          <a class="fork-repo-link" href="https://github.com/Callmesauce/Calculator2022.git" target="_blank">
+            <b>Calc2022</b> <i class="fas fa-code-branch"></i>Fork it on GitHub
+          </a>
+          <a class="fork-repo-link" href="https://github.com/Callmesauce/Calculator2023.git" target="_blank">
+            <b>Calc2023</b> <i class="fas fa-code-branch"></i>Fork it on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="modalz" id="cloned2">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('cloned2')">&times;</span>
+        <h2 class="animated-text">TimeTrack | Cloned from frontendmentor.io</h2>
+        <div class="gif-demo">
+          <iframe src="https://callmesauce.github.io/timetrack/" frameborder="0" width="100%" height="500"></iframe>
+        </div>
+        <div class="interaction-section">
+          <div class="like-button liikkee">
+            <i class="far fa-heart liikkee"></i>
+          </div>
+          <div class="like-tooltip">Click to Like</div>
+          <a class="fork-repo-link" href="https://github.com/Callmesauce/timetrack.git" target="_blank">
+            <i class="fas fa-code-branch"></i> Fork on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modalz" id="simpleTodo">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('simpleTodo')">&times;</span>
+        <h2 class="animated-text">Simple TodoList App | using Functional Programming Approach bare coded</h2>
+        <div class="gif-demo">
+          <iframe src="https://callmesauce.github.io/Basic_todolistApp/" frameborder="0" width="100%" height="500"></iframe>
+        </div>
+        <div class="interaction-section">
+          <div class="like-button liikkee">
+            <i class="far fa-heart liikkee"></i>
+          </div>
+          <div class="like-tooltip">Click to Like</div>
+          <a class="fork-repo-link" href="https://github.com/Callmesauce/Basic_todolistApp.git" target="_blank">
+            <i class="fas fa-code-branch"></i> Fork on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
