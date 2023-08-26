@@ -36,7 +36,7 @@ function type(text, textcontainer) {
   animationFrameId = requestAnimationFrame(() =>
     setTimeout(() => {
       type(text + " " + word, textcontainer);
-    }, 100)
+    }, 80)
   );
 }
 
