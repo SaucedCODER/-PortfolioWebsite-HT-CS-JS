@@ -34,9 +34,7 @@ function type(text, textcontainer) {
 
   currentWordIndex++;
   animationFrameId = requestAnimationFrame(() =>
-    setTimeout(() => {
-      type(text + " " + word, textcontainer);
-    }, 80)
+    type(text + " " + word, textcontainer)
   );
 }
 
