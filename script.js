@@ -1,6 +1,5 @@
 const text = `<span class="web-developer-text">
 <span id="animated-text" style="font-size:clamp(25px,50%,1.5rem)">Hi there👋, I'm Zeus</span>
-
 </span>
 <br/>
 <p style="text-align:center;font-style:italic;color:#e6e6e6;">
