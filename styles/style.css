@@ -8,7 +8,7 @@ html{
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #000f25;
+    background: linear-gradient(270deg, #000000, #05010a, #0f041b, #15072d, #150a40, #140a4f, #130a55);
     color: #eaeaea;
     
   }
