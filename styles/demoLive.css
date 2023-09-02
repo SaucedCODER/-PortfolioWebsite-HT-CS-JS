@@ -45,6 +45,8 @@ body.modal-open {
   .gif-demo {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap:.5rem;
     margin-top: 20px;
 
   }
