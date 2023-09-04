@@ -21,7 +21,6 @@
     color: #ffffff;
     margin-bottom: 5px;
     background-color: #000000;
-    box-shadow: 3px 5px 10px black;
     border-radius: 10px;
     padding: 1rem;
   }
@@ -37,20 +36,20 @@
   
   @keyframes scrollMessage {
     0% {
-      opacity: 0;
+      opacity: .7;
     }
     50% {
       opacity: 1;
     }
     100% {
-      opacity: 0;
+      opacity: .7;
     }
   }
   
 
   @keyframes arrow {
     0% {
-      opacity: 0;
+      opacity: .7;
       transform: translate(-50%, 100px) rotate(45deg);
       -webkit-transform: translate(-50%, -10px) rotate(45deg);
     }
@@ -60,7 +59,7 @@
       -webkit-transform: translate(-50%, 0) rotate(45deg);
     }
     100% {
-      opacity: 0;
+      opacity: .7;
       transform: translate(-50%, 10px) rotate(45deg);
       -webkit-transform: translate(-50%, 10px) rotate(45deg);
     }
@@ -69,10 +68,8 @@
   @media screen and (max-width: 768px) {
     #scroll-message p {
         font-size: 20px;
-        /* color: #000000;  */
       }
       #scroll-message {
-  /* background-color: #ffffff;  */
   text-align: center;
   z-index: 9999;
       }
