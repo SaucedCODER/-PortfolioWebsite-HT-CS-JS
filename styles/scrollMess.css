@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    transition: opacity 0.5s ease;
-    animation: scrollMessage 2s ease-in-out infinite;
+    transition: opacity 0.9s ease;
+    animation: scrollMessage 5s ease-in-out infinite;
   }
   #scroll-message.hide {
    display: none;
@@ -18,8 +18,12 @@
   #scroll-message p {
     font-size: 22px;
     font-weight: bold;
-    color: #777;
+    color: #ffffff;
     margin-bottom: 5px;
+    background-color: #000000;
+    box-shadow: 3px 5px 10px black;
+    border-radius: 10px;
+    padding: 1rem;
   }
   
   .arrow {
@@ -28,7 +32,7 @@
     border: 2px solid #777;
     border-width: 0 5px 5px 0;
     transform: rotate(45deg);
-    animation: arrow 2s ease-in-out infinite;
+    animation: arrow 5s ease-in-out infinite;
   }
   
   @keyframes scrollMessage {
