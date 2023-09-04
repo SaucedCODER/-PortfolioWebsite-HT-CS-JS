@@ -9,9 +9,9 @@ html{
 body {
     font-family: Arial, sans-serif;
     background: rgb(19,0,43);
-    background: -moz-linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9080882352941176) 50%, rgba(16,0,57,1) 75%);
-    background: -webkit-linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9080882352941176) 50%, rgba(16,0,57,1) 75%);
-    background: linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9080882352941176) 50%, rgba(16,0,57,1) 75%);
+    background: -moz-linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9613095238095238) 50%, rgba(16,0,57,1) 75%);
+    background: -webkit-linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9613095238095238) 50%, rgba(16,0,57,1) 75%);
+    background: linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9613095238095238) 50%, rgba(16,0,57,1) 75%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13002b",endColorstr="#100039",GradientType=1);
     color: #eaeaea;
     
