@@ -10,7 +10,7 @@
     justify-content: center;
     margin-bottom: 30px;
     transition: opacity 0.9s ease;
-    animation: scrollMessage 5s ease-in-out infinite;
+    animation: scrollMessage 3s ease-in-out infinite;
   }
   #scroll-message.hide {
    display: none;
@@ -31,18 +31,18 @@
     border: 2px solid #777;
     border-width: 0 5px 5px 0;
     transform: rotate(45deg);
-    animation: arrow 5s ease-in-out infinite;
+    animation: arrow 3s ease-in-out infinite;
   }
   
   @keyframes scrollMessage {
     0% {
-      opacity: .7;
+      opacity: 0;
     }
     50% {
       opacity: 1;
     }
     100% {
-      opacity: .7;
+      opacity: 0;
     }
   }
   

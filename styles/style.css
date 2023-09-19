@@ -1,5 +1,6 @@
 html{
   scroll-behavior: smooth;
+  scroll-padding: var(--scroll-pad,5rem);
 }
 * {
   margin: 0;
@@ -7,12 +8,12 @@ html{
   box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
-    background: rgb(19,0,43);
-    background: -moz-linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9613095238095238) 50%, rgba(16,0,57,1) 75%);
-    background: -webkit-linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9613095238095238) 50%, rgba(16,0,57,1) 75%);
-    background: linear-gradient(90deg, rgba(19,0,43,0.9557072829131653) 25%, rgba(0,0,0,0.9613095238095238) 50%, rgba(16,0,57,1) 75%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13002b",endColorstr="#100039",GradientType=1);
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 7%;
+    background-color: #00031d;
     color: #eaeaea;
     
   }

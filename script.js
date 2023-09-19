@@ -1,3 +1,7 @@
+//navigation primary
+const primaryNav = document.querySelector("#myNav");
+let navHeight = primaryNav.offsetHeight;
+document.documentElement.style.setProperty("--scroll-pad", navHeight + "px");
 const text = `<span class="web-developer-text">
 <span id="animated-text" style="font-size:clamp(25px,50%,1.5rem)">Hi there👋, I'm Zeus</span>
 </span>
@@ -45,11 +49,8 @@ function instantlyTyped(text, textcontainer) {
 
 type("", textcontainer);
 document.addEventListener("click", function () {
-  console.log("click");
   if (!istypingcompleted) {
-    console.log("work");
     cancelAnimationFrame(animationFrameId);
-
     instantlyTyped(text, textcontainer);
     istypingcompleted = true;
   }
@@ -82,21 +83,6 @@ function animateProjects() {
 
 window.addEventListener("scroll", animateProjects);
 
-function scrollToProjects(e) {
-  // Get the Projects section element by its ID
-  console.log(e.target.dataset.linkId);
-  const projectsSection = document.querySelector(`#${e.target.dataset.linkId}`);
-
-  // Calculate the scroll position of the Projects section
-  const scrollPosition = projectsSection.offsetTop - 20;
-
-  // Scroll to the Projects section using the smooth scrolling behavior
-  window.scrollTo({
-    top: scrollPosition,
-    behavior: "smooth",
-  });
-}
-
 const categoryButtons = document.querySelectorAll("#category-buttons button");
 const projectList = document.getElementById("project-list");
 
@@ -121,12 +107,6 @@ categoryButtons.forEach((button) => {
     });
   });
 });
-
-// burger
-function toggleNav() {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("menu-open");
-}
 
 // Demo Live Scripts
 function openModal(modalId) {
@@ -164,16 +144,12 @@ function showLikeTooltip(modal) {
 
 // JavaScript for the crack animation
 function crackAnimation(event) {
+  event.preventDefault();
   const link = event.currentTarget;
 
-  // Add the "cracked" class to trigger the animation
   link.classList.add("cracked");
 
-  // After the animation is complete, remove the "cracked" class to reset the animation
   setTimeout(() => {
     link.classList.remove("cracked");
   }, 2000);
-
-  // Prevent the link from being followed immediately
-  event.preventDefault();
 }
