@@ -1,4 +1,4 @@
-# Simple Portfolio - Pure HTML, CSS(Bootstrap), Javascript
+# Simple Portfolio Project - Utilizing Pure HTML, CSS(Bootstrap), Javascript
 
 A simple portfolio website showcasing my projects and information. Built with HTML, CSS, JavaScript, and Bootstrap 5.
 
